@@ -1,0 +1,40 @@
+{% extends "base.html" %}  
+{% load static %}
+{% load bootstrap3 %}
+<link rel='stylesheet' href='{% static "account/styles.css" %}'>
+{% block content %}     
+    <div id='addhouse'>
+        <br>
+        <div class='addshow'>
+                {% if messages %}
+                            <div class="alert alert-success">
+                                <p>    
+                                    {% for message in messages %}          
+                                        {{ message|safe }}          
+                                    {% endfor %}  
+                                </p>
+                            </div>                     
+                        {% endif %}
+            <br>
+            <h1 style=" font-size: 30px; color:#666666;">Edit your account</h1>  
+            <br>
+             
+            <form action="." method="post" enctype="multipart/form-data">    
+                {% load bootstrap %}
+                {{ user_form|bootstrap}}
+                {{ profile_form|bootstrap}}    
+                {% csrf_token %}    
+                <p><input type="submit" value="Save changes" class='btn btn-success'></p>  
+            </form>
+            <br>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+ 
+
+
+

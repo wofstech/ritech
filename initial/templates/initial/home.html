@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:italic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <link rel='stylesheet' href='{% static "account/styles.css" %}'>
+        <link href='{% static "account/css/mdb.min.css" %}' rel="stylesheet">
+</head>
+<body>
+    <header id="header" class="site-header">
+		<nav class="top-ribbon navbar navbar-fixed-top">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="container-fluid site-identity">
+					
+				</div>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="navbar-nav nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="signup.html">Create Account</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+					<li><a href="login.html">Login</a></li>
+				</ul>
+				<ul class="navbar-nav navbar-right nav social">
+					<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+					<li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+					<li><a href="#"><span class="fab fa-twitter"></span></a></li>
+					<li><a href="#"><span class="fab fa-github"></span></a></li>
+					<li><a href="#"><span class="fab fa-instagram"></span></a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container-fluid slider-container-fluid">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>	
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="slider-text">
+										<h1>Catchy Title Goes Here</h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+										</p>
+										<a class="btn btn-default pull-right" href="#">Read More &#187;</a>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="monitor">
+										<div class="rectangle">
+											<img src='{% static "account/image/postImage1.jpg" %}' width="604" height="390">
+										</div>
+										<div class="bottom"></div>
+										<div class="base"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="slider-text">
+										<h1>Catchy Title Goes Here</h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+										</p>
+										<a class="btn btn-default pull-right" href="#">Read More &#187;</a>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="monitor">
+										<div class="rectangle">
+											<img src='{% static "account/image/postImage1.jpg" %}' width="604" height="390">
+										</div>
+										<div class="bottom"></div>
+										<div class="base"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="slider-text">
+										<h1>Catchy Title Goes Here</h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+										</p>
+										<a class="btn btn-default pull-right" href="#">Read More &#187;</a>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="monitor">
+										<div class="rectangle">
+											<img src='{% static "account/image/postImage1.jpg" %}' width="604" height="390">
+										</div>
+										<div class="bottom"></div>
+										<div class="base"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a-->
+			</div>
+		</div>
+		<div class="header-ribbon">
+			<div class="container-fluid"><a class="btn pull-right" href="#content"><span class="fas fa-arrow-down"></span></a></div>
+		</div>
+	</header>
+	<div id="content">
+		<div class="container-fluid">
+			<div class="row">
+				<section class="col-md-4 section about">
+					<h3>About Us</h3>
+					<div class="post-thumbnail">
+
+					</div>
+					<p>
+						Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus laoreet tincidunt ut vel velit nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt.<br><br>Idenim semper pellente velis felit ac. Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt.
+					</p>
+					<a href="#" class="more btn pull-right">Read more &#187;</a>
+				</section>
+				<section class="col-md-4 section services">
+					<h3>Our Services</h3>
+					<div class="row">
+						<div class="col-sm-3 col-xs-12"><div class="post-thumbnail"></div></div>
+						<div class="col-sm-9 col-xs-12">
+							<h2>Service Name</h2>
+							<p>
+								Inteligula congue id elis donec sce sag ittis intes id laoreet aenean.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3 col-xs-12"><div class="post-thumbnail"></div></div>
+						<div class="col-sm-9 col-xs-12">
+							<h2>Service Name</h2>
+							<p>
+								Inteligula congue id elis donec sce sag ittis intes id laoreet aenean.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3 col-xs-12"><div class="post-thumbnail"></div></div>
+						<div class="col-sm-9 col-xs-12">
+							<h2>Service Name</h2>
+							<p>
+								Inteligula congue id elis donec sce sag ittis intes id laoreet aenean.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3 col-xs-12"><div class="post-thumbnail"></div></div>
+						<div class="col-sm-9 col-xs-12">
+							<h2>Service Name</h2>
+							<p>
+								Inteligula congue id elis donec sce sag ittis intes id laoreet aenean.
+							</p>
+						</div>
+					</div>
+					<a href="#" class="btn more">View More Services &#187;</a>
+				</section>
+				<section class="col-md-4 section testimonies">
+					<h3>Testomies From Clients</h3>
+					<div>
+						<h2 class="large-pre-quote">Fidelis Cheks<span> - CEO </span></h2>
+						<p>
+							Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus laoreet tincidunt ut vel velit. Idenim semper pellente velis felit ac nullam pretium morbi lacus.
+						</p>
+						<a href="#" class="btn more pull-right">View this project &#187;</a>
+					</div><div>
+						<h2 class="large-pre-quote">Victor Emmanuel<span> - Dev </span></h2>
+						<p>
+							Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus laoreet tincidunt ut vel velit. Idenim semper pellente velis felit ac nullam pretium morbi lacus.
+						</p>
+						<a href="#" class="btn more pull-right">View this project &#187;</a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<footer class="site-footer">
+		<div class="container-fluid">
+			<a class="scroll-to-top fas fa-arrow-up" href="#header"></a>
+			<div class="row">
+				<div class="col-md-3">
+					<h3>Quick Links</h3>
+					<ul class="navbar">
+						<li><a href="#">Lorem ipsum dolor sit</a></li>
+						<li><a href="#">Amet consectetur</a></li>
+						<li><a href="#">Praesent vel sem id</a></li>
+						<li><a href="#">Curabitur hendrerit est</a></li>
+						<li><a href="#">Aliquam eget erat nec sapien</a></li>
+						<li><a href="#">Cras id augue nunc</a></li>
+						<li><a href="#">In nec justo non</a></li>
+						<li><a href="#">Vivamus mollis enim ut</a></li>
+						<li><a href="#">Curabitur hendrerit est</a></li>
+						<li><a href="#">Sed a nulla urna</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h3>Latest Blog Post</h3>
+					<div class="blog-post-footer">
+						<h2><a href="#">Post Title</a></h2>
+						<p class="post-meta">
+							Admin, domainname.com<br>
+							Friday, 6th April 2000
+						</p>
+						<p>
+							Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
+						</p>
+						<a href="#" class="more btn pull-right">Read More &#187;</a>
+					</div>
+					<div class="blog-post-footer">
+						<h2><a href="#">Post Title</a></h2>
+						<p class="post-meta">
+							Admin, domainname.com<br>
+							Friday, 6th April 2000
+						</p>
+						<p>
+							Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
+						</p>
+						<a href="#" class="more btn pull-right">Read More &#187;</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<h3>Latest Tweets</h3>
+					<p class="tweet">
+						<a href="#" class="more">@namehere</a> Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus.<br>1 day ago
+					</p>
+					<p class="tweet">
+						<a href="#" class="more">@namehere</a> Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus.<br>1 day ago
+					</p>
+				</div>
+				<div class="col-md-3">
+					<h3>News Letter</h3>
+					<form class="footer-form">
+						<div class="form-group">
+							<label class="label" for="name">Name</label>
+							<input type="text" id="name" placeholder="John Doe" class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="label" for="email">Email</label>
+							<input type="email" id="email" placeholder="example@domain.com" class="form-control">
+						</div>
+						<input value="Subscribe" type="submit" class="btn btn-default pull-right">
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer-ribbon">
+			<div class="container-fluid">
+				<div class="row">
+					<p class="col-xs-6">Designed by <a href="#">DreamyMakeup</a></p>
+					<p class="col-xs-6" style="text-align: right;">Copyright &copy; Project Help 2018. All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+

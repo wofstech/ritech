@@ -1,0 +1,63 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% load postman_tags %}
+{% load bootstrap3 %}
+<link rel='stylesheet' href='{% static "account/styles.css" %}'>
+
+{% block content %}     
+    <section id='dashboard-showcase'>
+           <div class='myforms1'> 
+                <p class='contact-p'>Contact Us</p>
+            <form method="post">
+                    {% csrf_token %}
+                    {% bootstrap_form form  %}
+                    <button type="submit" class='btn btn-primary'>Send</button>
+                    <br>
+                    <br>
+                    
+                    <br>
+                    <br>
+                
+            </form>
+            </div>
+    </section>  
+{%  endblock %}
+
+
+
+
+
+
+
+
+{% load staticfiles %}
+{% load bootstrap3 %}
+<link rel='stylesheet' href='{% static "blog/styles.css" %}'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:italic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <link rel='stylesheet' href='{% static "account/styles.css" %}'>
+<section id='sshowcase'>
+    <br>
+<div class='myforms1'> 
+    <h3 style="font-family: 'Tangerine', serif; font-size: 58px; color:#fff;">Contact us</h3>  
+    
+<form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form  %}
+        <button type="submit" id='sub1'>Send</button>
+        <br>
+        <br>
+        <a  style='color:aqua; font-size: 18px' href='{% url "dashboard" %}'>Go back</a>
+        <br>
+        <br>
+    
+</form>
+</div>
+</section>

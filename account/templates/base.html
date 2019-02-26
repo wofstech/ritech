@@ -1,0 +1,164 @@
+{% load staticfiles %} 
+<!DOCTYPE html> 
+<html> 
+    <head>  
+        <title>Ywala Housing</title>  
+        {% load static %}
+   
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:italic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <link rel='stylesheet' href='{% static "account/styles.css" %}'>
+        <link href='{% static "account/css/mdb.min.css" %}' rel="stylesheet">
+        
+
+    </head> 
+    <body>  
+        {% block header %}
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Ywala Housing</a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                
+                <form method='get' action='#' class="navbar-form navbar-right">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id='sbox'name='q' placeholder="Search Houses" value='{{ request.get.q }}'>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                        <a href='#' class='navbar-left'>
+                            {% if user.profile.image  %} 
+                            <img src='{{ user.profile.image.url }}'  width='50px' height="50px" style='border-radius:50%'>
+                            {% else %}
+                            <img src='{% static "account/avatar2.jpg" %}' width='50px' height="50px" style='border-radius:50%'>
+                            {% endif %}
+                            </a>
+                        
+                        <li class="dropdown" style="color:white">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style='color:#286DA8; background:transparent'>Hello {{ request.user.first_name }}<span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a href="#">Dashboard</a></li>
+                            <li role="separator" class="divider" style='padding:0px'></li>
+                            <li><a href="#">Make a listing</a></li>
+                            <li role="separator" class="divider" style='padding:0px'></li>
+                            <li><a href="#">Inbox</a></li>
+                            <li role="separator" class="divider" style='padding:0px'></li>
+                            <li><a href='#'>Manage Listing</a></li>
+                            <li role="separator" class="divider" style='padding:0px'></li>
+                            <li><a href="#">VIP Search</a></li>
+                            <li role="separator" class="divider" style='padding:0px'></li>
+                            <li><a href='#'>Edit Profile</a></li>
+                            <li role="separator" class="divider" style='padding:0px'></li>
+                            <li><a href='#'>Send us a message</a></li>
+                            <li role="separator" class="divider" style='padding:0px'></li>
+                            <li><a href='#'>Logout</a></li>
+                            
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li ><a href="{% url 'register' %}" style='color:#286da8'>Register</a></li>
+                        <li><a href="{% url 'login' %}" style='color:#286da8'>Login</a></li>
+                        <li><a href="{% url 'login' %}" style='color:#286da8'>Rent an apartment</a></li>   
+                    {% endif %}
+                    
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+         
+    {% endblock %}
+    <a href="#" class="scrollToTop" style="display: inline;">
+        <div class="animated bounce infinite" style="">
+            <i class="fa fa-arrow-circle-up"></i>
+        </div> 
+    </a>
+    <div id="content"> 
+            
+        {% block content %} 
+        {% endblock %}  
+    </div> 
+    <footer class='container-fluid ' id='mfoot'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-sm-4'>
+                        <ul>
+                            <li><a href='#'>About Ywala.com</a></li>
+                            <li><a href='#'>Ywala Blog</a></li>
+                            <li>Terms and Conditions</li>
+                            <li>Privacy Policy</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class='col-sm-4'>
+                        <ul>
+                            <li>Finding a room</li>
+                            <li>How it Works</li>
+                            <li>Why use Ywala.com</li>
+                            <li>FAQ</li>
+                            <li>Refund Policy</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class='col-sm-4'>
+                        <a href='#' class='fa fa-facebook'></a>
+                        <a href='#' class='fa fa-twitter'></a>
+                        <a href='#' class='fa fa-google'></a>
+                        <a href='#' class='fa fa-youtube'></a>
+                    </div>
+                    <br>
+                    
+                </div>
+                
+                    <hr style='border-color:#286DA8; border-width: 1px'>
+                    <p>Copyright 2018, Ywala.com</p>
+            </div>
+        </footer>
+        
+        <script>
+    $(document).ready(function(){
+
+//Check to see if the window is top if not then display button
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 600) {
+        $('.scrollToTop').fadeIn();
+    } else {
+        $('.scrollToTop').fadeOut();
+    }
+});
+
+//Click event to scroll to top
+$('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+});
+
+});
+</script>
+
+<script type="text/javascript" src="{% static 'account/js/mdb.min.js' %}"></script>
+</body> 
+</html>

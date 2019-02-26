@@ -1,0 +1,49 @@
+{% extends "base.html" %}  
+{% load static %}
+{% load bootstrap3 %}
+{% load pagination_tags %}
+<link rel='stylesheet' href='{% static "account/styles.css" %}'>
+{% block content %}  
+    <section id='srs'>
+        <br>
+    <div class='sr1'>
+    
+    {% autopaginate results 9 %}
+    <ul class='divider'>
+    <div class='row'>
+        
+        {% if results %}
+        <h3 style='margin-left:20px;'><strong>Search Results</h3></strong>
+        <br>
+            {% for element in results %}
+                <div class='col-sm-4'>
+                    <div id='myinner2'>
+                        <img src='{{element.house_image.url}}' class='responsive' >
+                        <br><br>
+                        <div class='userpost2'>
+                            <div class='rightguy'>
+                                <li>{{ element.name_of_accomodation }}</li>
+                            <li> <img src="{% static 'account/bed1.png' %}" width='17px' height='17px'>&nbsp{{element.Number_of_rooms}}</li>
+                            </div>
+                            <div class='leftguy'>
+                                <li><img src="{% static 'account/loc2.png' %}" width='20px' height='20px' > &nbsp{{element.State}}</li>
+                            <li><img src="{% static 'account/naira1.png' %}" width='20px' height='20px' >&nbsp{{element.house_rent}}</li>
+                            </div>
+                        </div>
+                        <div class='centreguy'>
+                                <a href="{% url 'search-detail' element.id %}"> <button class='button_2'>Learn more</button></a><br>
+                            </div>
+                    
+                        <br> 
+                    </div>
+                </div>   
+            {% endfor %}
+        {% else %}
+                <h3>No Results Found</h3>
+        {% endif %}
+        </div>
+    </ul>
+        <div style='text-align:center; font-size:20px;'>{% paginate %}</div>
+    </div>
+    </section>
+{% endblock %}

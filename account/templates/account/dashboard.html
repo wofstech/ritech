@@ -1,0 +1,63 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+<link rel='stylesheet' href='{% static "account/styles.css" %}'>
+
+{% block content %}     
+    <section id='dashboard-showcase'>
+           <div class='dashboard-showcase2'>
+                
+                           
+                            
+                        </p>
+                    </div> 
+               <div class='row' style='text-align:center'>
+                   <div class='col-sm-4' id='dash-inner'>
+                       <div class='iconLock'>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                       </div>
+                       <div class='dash-Text'>
+                           <h3>Your Inbox</h3>
+                           <p class='dash-p'>Have a perfect overview of all your conversations, archive, filter your dialogues here.</p>
+                           <a href='#'><button class='btn btn-primary'>Go to Inbox</button></a>
+                       </div>
+
+                   </div>
+
+                   <div class='col-sm-4' id='dash-inner'>
+                        <div class='iconLock'>
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </div>
+                        <div class='dash-Text'>
+                            <h3>Your Listing</h3>
+                            <p class='dash-p'>Manage existing listing, create new ones, list and unlist them in one click!.</p>
+                            <a href='#'><button class='btn btn-primary'>Manage Listing</button></a>
+                        </div>
+                    </div>
+
+                    <div class='col-sm-4' id='dash-inner'>
+                        <div class='iconLock'>
+                            <i class="fa fa-address-card" aria-hidden="true"></i>
+                        </div>
+                        <div class='dash-Text'>
+                            <h3>Your Profile</h3>
+                            <p class='dash-p'>Make sure people know who you are so that they can trust you. Add your information here.</p>
+                            <a href='#'><button class='btn btn-primary'>Edit Profile</button></a>
+                        </div>
+                    
+                    </div>
+               </div>
+               <div class='bottom-dash'>
+                   <div class='bottom-dash2' style='text-align:center'>
+                        <div class='dash-Text'>
+                            <h3>HELP US IMPROVE YWALA.COM</h3>
+                            <p>We take your feedback seriously. More exciting features and improvements are on their way. You can help us by telling us your suggestions on what we should improve. Anything you want to share with us?</p>
+                            <a href='#'><button class='btn btn-primary'>Send Us a Feedback</button></a>
+                        </div>
+                   </div>
+                   <br><br>
+               </div>
+           </div>
+    </section>  
+{%  endblock %}

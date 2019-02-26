@@ -1,0 +1,72 @@
+{% load static %}
+
+{% load widget_tweaks%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{% block title %}Login V1{% endblock title %}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'account/registration/img/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'account/registration/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<!--<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">  -->
+	<link href="{% static 'account/registration/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet">
+<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">  -->
+	<link href="{% static 'account/registration/vendor/animate/animate.css' %}" rel="stylesheet">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'account/registration/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'account/registration/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'account/registration/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'account/registration/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{% static 'account/registration/img/logocd11.jpg' %}" alt="Bishop David Abioye" style='border-radius:20px'>
+				</div>
+
+				{% block content %}
+					
+				{% endblock content %}
+
+				
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="{% static 'account/registration/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'account/registration/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'account/registration/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'account/registration/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'account/registration/vendor/tilt/tilt.jquery.min.js' %}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'accounts/registration/js/main.js' %}"></script>
+	{% block javascript %}
+	
+	{% endblock javascript %}
+
+</body>
+</html>

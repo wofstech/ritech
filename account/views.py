@@ -13,7 +13,6 @@ from account.forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin
-from paystack.signals import payment_verified
 from django.dispatch import receiver
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin

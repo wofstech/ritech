@@ -1,16 +1,13 @@
-
-<!DOCTYPE html> 
-<html> 
-    <head>  
-        <title>Ywala Housing</title>  
-        {% load static %}
-
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-
-        
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
@@ -19,48 +16,185 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-        <link rel='stylesheet' href='{% static "account/style2.css" %}'>
+        <link rel='stylesheet' href='{% static "account/styles.css" %}'>
         <link href='{% static "account/css/mdb.min.css" %}' rel="stylesheet">
-        
-
-    </head> 
-    <body>  
-        
-            {% load bootstrap3 %}
-            {% load bootstrap %}
-            <div class="main-w3layouts wrapper">
-                  
-                    <div class="main-agileinfo">
-                        <div class='inner-signup'>
-                            <h1 style="font-size:30px;">Create an account</h1><br>
-                            <p>Please, sign up using the following form:</p><br>
-                            <form action="." method="post">
-                                {{ user_form.username|bootstrap }} 
-                                {{ user_form.first_name|bootstrap}}
-                                {{ user_form.email|bootstrap}}
-                                {{ user_form.password|bootstrap}}
-                                {{ user_form.password2|bootstrap}}   
-                                
-                                {% csrf_token %}    
-                                <input type="submit" value="Create my account" class='btn btn-primary' > 
-                                <p>Already have an Account? <a href="{% url 'login' %}" style='color:aqua'> Login Now!</a></p> 
-                            </form>
-                        </div>
-                    
+        {% load bootstrap3 %}
+        {% load bootstrap %}
+</head>
+<body class="login-page">
+	<header id="header" class="site-header">
+		<nav class="top-ribbon navbar navbar-fixed-top">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="container-fluid site-identity">
+					
+				</div>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="navbar-nav nav">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="{% url 'register' %}">Create Account</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+					        <li><a href="#">Separated link</a></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+					<li><a href="{% url 'login' %}">Login</a></li>
+				</ul>
+				<ul class="navbar-nav navbar-right nav social">
+					<li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+					<li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+					<li><a href="#"><span class="fab fa-twitter"></span></a></li>
+					<li><a href="#"><span class="fab fa-github"></span></a></li>
+					<li><a href="#"><span class="fab fa-instagram"></span></a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container-fluid slider-container-fluid">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>	
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="slider-text">
+										<h1>Catchy Title Goes Here</h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+										</p>
+										<a class="btn btn-default pull-right" href="#">Read More &#187;</a>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="monitor">
+										<div class="rectangle">
+											<img src="image/postImage1.jpg" width="604" height="390">
+										</div>
+										<div class="bottom"></div>
+										<div class="base"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="slider-text">
+										<h1>Catchy Title Goes Here</h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+										</p>
+										<a class="btn btn-default pull-right" href="#">Read More &#187;</a>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="monitor">
+										<div class="rectangle">
+											<img src="image/postImage1.jpg" width="604" height="390">
+										</div>
+										<div class="bottom"></div>
+										<div class="base"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="slider-text">
+										<h1>Catchy Title Goes Here</h1>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+										</p>
+										<a class="btn btn-default pull-right" href="#">Read More &#187;</a>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="monitor">
+										<div class="rectangle">
+											<img src="image/postImage1.jpg" width="604" height="390">
+										</div>
+										<div class="bottom"></div>
+										<div class="base"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+			</div>
+		</div>
+		<div class="header-ribbon">
+			<div class="container-fluid"><a class="btn pull-right" href="#content"><span class="fas fa-arrow-down"></span></a></div>
+		</div>
+	</header>
+	<div class="container-fluid">
+		<div id="content">
+			<div class="container-custom">
+				<div class='inner-signup'>
+                    <h1 style="font-size:30px;">Create an account</h1><br>
+                    <p>Please, sign up using the following form:</p><br>
+                    <form action="." method="post">
+                        {{ user_form.username|bootstrap }} 
+                        {{ user_form.first_name|bootstrap}}
+                        {{ user_form.email|bootstrap}}
+                        {{ user_form.password|bootstrap}}
+                        {{ user_form.password2|bootstrap}}   
+                        
+                        {% csrf_token %}    
+                        <input type="submit" value="Create my account" class='btn btn-primary' > 
+                        <p>Already have an Account? <a href="{% url 'login' %}" style='color:aqua'> Login Now!</a></p> 
+                    </form>
                 </div>
-
-                <ul class="colorlib-bubbles">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-            </div>
-</body> 
+			</div>
+		</div>
+	</div>
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3 class="footer-section-title">Quick Links</h3>
+					<ul class="navbar nav">
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li><a href="#">Link 4</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<h3 class="footer-section-title">Lorem Ipsum</h3>
+					<ul class="navbar nav">
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Job Oppurtunities</a></li>
+						<li><a href="#">Developers</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-ribbon">
+			<div class="container-fluid">
+				<div class="row">
+					<p class="col-xs-6">Designed by crypto</p>
+					<p class="col-xs-6" style="text-align: right;">Project Help &copy; 2018</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
 </html>
